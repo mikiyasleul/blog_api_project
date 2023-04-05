@@ -26,9 +26,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/user', [AuthController::class, 'user']);
     Route::post('/logout', [AuthController::class, 'logout']);
 
-    Route::resource('/category', [CategoryController::class])->except('create', 'edit'); // all category routes
+    Route::resource('/category', CategoryController::class)->except('create', 'edit'); // all category routes
 
-    Route::resource('/tag', [TagController::class])->except('create', 'edit'); // all tag routes
+    Route::resource('/tag', TagController::class)->except('create', 'edit'); // all tag routes
 
-    Route::resource('/article', [ArticleController::class])->except('create', 'edit'); // all article routes
+    Route::resource('/article', ArticleController::class)->except('create', 'edit'); // all article routes
 });
